@@ -1,6 +1,6 @@
-import sys
+import sys, os
 import unittest
-sys.path.append('../')
+sys.path.insert(0,os.path.dirname(os.path.dirname(__file__)))
 from arabicToRoman import arabicToRoman
 
 class BasicTests(unittest.TestCase):
