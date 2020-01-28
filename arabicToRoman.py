@@ -1,14 +1,10 @@
 
 
 def arabicToRoman(inputNumber):
-    try:
-        inputNumber = int(inputNumber)
-    except Exception as e:
-        print(e)
-        return
+    inputNumber = int(inputNumber)
     
     if inputNumber < 0 or inputNumber > 3999:
-        return
+        raise Exception('inputNumber should not exceed 3999 or be lower than 0. The value of inputNumber was: {}'.format(inputNumber))
 
     numToRoman = [(1000,"M"), (900,"CM"), (500,"D"), (400,"CD"), (100,"C"), (90,"XC"), (50,"L"), (40,"XL"), (10,"X"), (9,"IX"), (5,"V"), (4,"IV"), (1,"I")]
     answer = ""
